@@ -46,6 +46,7 @@ onMounted(fetchEmployees);
             <div>
                 <h2 class="paginationArrows" @click="toggleSortDirection">⬆️⬇️</h2>
             </div>
+            <div class="flexContainer">
             <h2 class="ourEmployeesHeader">Our Employees</h2>
             <ul class="employeesContainer">
                 <li v-for="employee in employees" :key="employee.id">
@@ -56,6 +57,7 @@ onMounted(fetchEmployees);
                     </div>
                 </li>
             </ul>
+         </div>
         </div>
     </div>
 </template>
@@ -65,6 +67,13 @@ onMounted(fetchEmployees);
 .paginationArrows {
     display: flex;
     cursor: pointer;
+}
+
+.flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .ourEmployeesHeader {
@@ -122,6 +131,18 @@ li {
     transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+    .employeeImage {
+        width: 15%;
+    }
+    .employeeNames {
+        font-size: 0.7em;
+    }
+    .employeeEmail {
+        font-size: 0.7em;
+    }
+}
+
 @media (min-width: 768px) {
     .employeesContainer {
         display: flex;
@@ -130,6 +151,7 @@ li {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 5em;
+        margin-top: 2em;
     }
 }
 </style>
