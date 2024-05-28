@@ -6,4 +6,4 @@
 
 || Stack ||
 
-[![My Skills](https://skillicons.dev/icons?i=vue,ts,css,vite,vscode)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=vue,ts,css,vite,vscode,netlify)](https://skillicons.dev)
